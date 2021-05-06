@@ -44,20 +44,12 @@
   {{ title_suffix }}
   {% block content %}
     <div{{ content_attributes.addClass('content') }}>
-
       <a class="advertising-block-banner" href="{{ content.field_link[0]['#url'] }}">
-{#        <a  href="{{ content.field_link[0]['#url'] class="advertising-block-banner" }}">#}
         {{ content.field_banner }}
       </a>
       <a class="advertising-block-mobile" href="{{ content.field_link[0]['#url']}}">
-{#        <a  href="{{ content.field_link[0]['#url'] class="advertising-block-mobile"}}">#}
-
         {{ content.field_mobile }}
       </a>
-
-{#      {{ content.field_link[0]['#url'] }}#}
-{#      {{ content }}#}
-
     </div>
   {% endblock %}
 </div>
