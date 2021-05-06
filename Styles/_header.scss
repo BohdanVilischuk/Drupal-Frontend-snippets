@@ -1,0 +1,137 @@
+@import "./header-nav";
+.header-container {
+    padding: 12px 0px 13px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include desktop1170px {
+        padding: 12px 16px 13px 16px;
+    }
+    @include tablet1023px {
+        padding: 13px 14px 14px 18px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        position: relative;
+        z-index: 1;
+    }
+}
+.logo-link {
+    @include tablet1023px {
+        order: 2;
+    }
+}
+.logo-container {
+    width: 100%;
+    max-width: 147px;
+    max-height: 28px;
+    order: 2;
+    @include tablet767px {
+        max-width: 110px;
+    }
+}
+
+.header-button__container {
+   max-width: 30%;
+   width: 100%;
+  display: flex;
+  justify-content: flex-end;
+    @include tablet1023px {
+     position: fixed;
+     bottom: 17px;
+     margin: auto;
+     left: 0;
+     right: 0;
+     z-index: 4;
+     max-width: 288px;
+     display: none;
+     &.active {
+         animation: btn .4s;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+
+     }
+    }
+}
+@keyframes btn {
+    from {
+        opacity: 0;
+        transform: translateX(-20%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.mobile-sign {
+    display: none;
+    @include tablet1023px {
+        display: flex;
+        order: 3;
+    }
+}
+.header-button {
+    @include font($fz-16, 500, 19px, $white);
+    display: flex;
+    color: white;
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 19px;
+    max-width: 180px;
+    width: 100%;
+    margin-left: 20px;
+    background-color: $main-green;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5px;
+    border-radius: 40px;
+    @include  tablet1023px {
+      margin-left: 0;
+      max-width: none;
+  }
+}
+.burger-container {
+    display: none;
+    @include tablet1023px {
+        order: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    span {
+       width: 26px;
+       height: 2px;
+       display: block;
+       margin: 2.5px 0px;
+       background-color: $black;
+       &:first-child {
+           margin-top: 0;
+           transition: .2s ease;
+           &.active {
+            transition: .2s ease;
+               margin: -1px 0px;
+               transform: rotate(45deg);
+
+           }
+       }
+       &:nth-child(2) {
+        transition: .2s ease;
+        transform: scaleX(1);
+        &.active {
+            margin: -1px 0px;
+            transition: .2s ease;
+            transform: scaleX(0);
+        }
+       }
+       &:last-child {
+        transition: .2s ease;
+        margin-bottom: 0;
+           &.active {
+            transform: rotate(-45deg);
+            transition: .2s ease;
+            margin: -1px 0px;
+        }
+       }
+
+    }
+}

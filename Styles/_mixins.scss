@@ -1,0 +1,93 @@
+// IE11 Mixin
+@mixin IE11styles {
+    @media screen\0 {
+        @content;
+    }
+}
+
+// Media mixin
+@mixin desktop1920px {
+    @media screen and (max-width: #{$w1920px}) {
+        @content;
+    }
+}
+//
+@mixin desktop1440px {
+    @media screen and (max-width: #{$w1440px}) {
+        @content;
+    }
+}
+//
+@mixin desktop1366px {
+    @media screen and (max-width: #{$w1366px}) {
+        @content;
+    }
+}
+//
+@mixin desktop1280px {
+    @media screen and (max-width: #{$w1280px}) {
+        @content;
+    }
+}
+//
+@mixin desktop1200px {
+    @media screen and (max-width: #{$w1200px}) {
+        @content;
+    }
+}
+//
+@mixin desktop1170px {
+    @media screen and (max-width: #{$w1170px}) {
+        @content;
+    }
+}
+//
+@mixin tablet1024px {
+    @media screen and (max-width: #{$w1024px}) {
+        @content;
+    }
+}
+//
+@mixin tablet1023px {
+    @media screen and (max-width: #{$w1023px}) {
+        @content;
+    }
+}
+//
+@mixin tablet996px {
+    @media screen and (max-width: #{$w996px}) {
+        @content;
+    }
+}
+//
+@mixin tablet768px {
+    @media screen and (max-width: #{$w768px}) {
+        @content;
+    }
+}
+//
+@mixin tablet767px {
+    @media screen and (max-width: #{$w767px}) {
+        @content;
+    }
+}
+//
+@mixin mobile480px {
+    @media screen and (max-width: #{$w480px}) {
+        @content;
+    }
+}
+//
+@mixin mobile320px {
+    @media screen and (max-width: #{$w320px}) {
+        @content;
+    }
+}
+//
+
+@mixin font($size, $weight, $line, $color: $black) {
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $line;
+}

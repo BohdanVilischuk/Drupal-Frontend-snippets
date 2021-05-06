@@ -1,0 +1,34 @@
+.main-partners__slider {
+    display: flex;
+    margin-bottom: 48px;
+    .slick-slide {
+        outline: none;
+    }
+    @include tablet767px {
+        margin-bottom: 26px;
+        .slick-slide {
+            opacity: 0;
+            transition: .2s ease;
+        }
+        .slick-track {
+            transition: .2s ease;
+        }
+        .slick-slide.slick-active.slick-current {
+            opacity: 1;
+            transition: .2s ease;
+        }
+    }
+}
+.main-partners__slide {
+    margin-right: 40px;
+    margin-left: 40px;
+}
+.main-partners__slide-image,
+.image-partners_block_h100_ {
+    img {
+        width: auto;
+    }
+    @include tablet767px {
+        max-width: 200px;
+    }
+}
